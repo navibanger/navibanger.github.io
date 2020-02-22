@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+        }
+        body {
+            background-color: gray;
+            margin: 100px; 100px; 100px; 100px;
+            padding 50px; 50px; 50px; 50px;
+        }
+        nav {
+            text-align: center;
+            background-color: dodgerblue;
+            margin: 100px; 100px; 100px; 100px;
+            padding 50px; 50px; 50px; 50px;
+            max-width: 10%;
+            border-style: solid;
+            border-color: darkblue;
+        }
+
+        ul {
+            list-style-type: none;
+            text-decoration: none;
+        }
+        a:hover {
+            border-bottom: 2px solid;
+            background: #CDFEAA;
+        }
+        a:visited {
+            color: purple;
+        }
+        footer {
+            text-align: center;
+            font-family: Impact;
+            margin: 100px; 100px; 100px; 100px;
+            padding 50px; 50px; 50px; 50px;
+        }
+        .log {
+            column-gap: 5px;
+            border: 5px solid mediumblue;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+ <main>
+
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li class="active"><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <h1>Login</h1>
+    <div class="log">
+        <label for="uName"><b>Email:</b></label>
+        <input type="text" placeholder="Enter Email" id="uName" required>
+        <label for="pswrd"><b>Password: </b></label>
+        <input type="password" placeholder="Enter Password" id="pswrd" required>
+        <button onclick="display()">Login</button>
+    </div>
+
+ </main>
+ <footer> &#x1f30c  &copy; 2020 FQ9429   &#x1f30c  </footer>
+<script>
+    function display(){
+        var mail = document.getElementById("uName");
+        var pass = document.getElementById("pswrd");
+        var info = "email: " + mail.value + " password: " + pass.value;
+        console.log(info);
+    }
+</script>
+</body>
+</html>

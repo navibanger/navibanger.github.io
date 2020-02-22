@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Membership Page</title>
+    <script src="membership.js"></script>
+    <link href="grid.css" rel="stylesheet">
+    <style>
+        h1 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+        }
+        body {
+            background-color: gray;
+            margin: 100px; 100px; 100px; 100px;
+            padding 50px; 50px; 50px; 50px;
+        }
+        nav {
+            text-align: center;
+            background-color: dodgerblue;
+            margin: 100px; 100px; 100px; 100px;
+            padding 50px; 50px; 50px; 50px;
+            max-width: 10%;
+            border-style: solid;
+            border-color: darkblue;
+        }
+
+        ul {
+            list-style-type: none;
+            text-decoration: none;
+        }
+        a:hover {
+            border-bottom: 2px solid;
+            background: #CDFEAA;
+        }
+        a:visited {
+            color: purple;
+        }
+        footer {
+            text-align: center;
+            font-family: Impact;
+            margin: 100px; 100px; 100px; 100px;
+            padding 50px; 50px; 50px; 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li class="active"><a href="membership.html">Membership</a></li>
+            </ul>
+        </nav>
+        <h2>Apply Now!</h2>
+        <div class="apply">
+            <label for="uName"><b>Name: </b></label>
+            <input type="text" id="uName" required>
+            <label for="eMail"><b>Email: </b></label>
+            <input type="email" id="eMail" required>
+            <label for="skill"><b>Skill: </b></label>
+            <select name="skill" id="skill" required>
+                <option>Level 1</option>
+                <option>Level 2</option>
+                <option>Level 3</option>
+            </select>
+            <button type="button" onclick="Apply()">Apply!</button>
+        </div>
+        <section id="ThanksDialog">
+            <div class="ShowDialog">
+                <h2></h2>
+                <p></p>
+            </div>
+        </section>
+    </main>
+    <footer> &#x1f30c  &copy; 2020 FQ9429   &#x1f30c  </footer>
+</body>
+</html>
