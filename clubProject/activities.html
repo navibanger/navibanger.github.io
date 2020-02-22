@@ -4,11 +4,14 @@
 	<title>Club Activities</title>
 	<meta charset="UTF-8">
 	<style>
-				header {
+		header {
 			text-align: center;
 			font-family: Impact;
 			margin: 100px; 100px; 100px; 100px;
 			padding 50px; 50px; 50px; 50px;
+		}
+		h2{
+			text-align: center;
 		}
 		body {
 			background-color: gray;
@@ -45,6 +48,26 @@
 			margin: 100px; 100px; 100px; 100px;
 			padding 50px; 50px; 50px; 50px;
 		}
+		#ActivityTable {
+			 display: flex;
+			 justify-content: space-around;
+		 }
+		table {
+			table-layout: fixed;
+			width: 50%;
+			border-collapse: collapse;
+			border: 5px solid dodgerblue;
+			text-align: center;
+		}
+		thead tr td {
+			text-align: center;
+			font-style: italic;
+			font-size: large;
+			border: 5px solid dodgerblue;
+		}
+		tbody td {
+			border: 5px solid dodgerblue;
+		}
 	</style>
 </head>
 <body>
@@ -53,15 +76,32 @@
 		<ul>
 			<li><a href="about.html">About</a></li>
 			<li><a href="index.html">Home</a></li>
+			<li><a href="login.html">Login</a></li>
+			<li><a href="membership.html">Membership</a></li>
 			<li class="active"><a href="activities.html">Activities</a></li>
 		</ul>
 	</nav>
+	<h2>Club Activities</h2>
+	<section id="ActivityTable">
+		<table>
+			<thead>
+				<tr>
+					<td>Event</td>
+					<td>Date</td>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</section>
+
 	<img src="C:/Users/ssr/Desktop/Web Development/assignment-navibanger/images/Desktop.png"
 	/>
 	<main>
 		<p>Welcome to the Club Activities Activity page. As of right now, we are updating the page for added functionality. Stay tuned.</p>
 	</main>
 	<footer> &#x1f30c  &copy; 2020 FQ9429   &#x1f30c  </footer>
+	<script src="eventData.js"></script>
+	<script src="activities.js"></script>
 </body>
 
 </html>
