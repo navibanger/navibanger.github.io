@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    
+  </title>
+  <link href="style.css" rel="stylesheet">
+  
+</head>
+
+<body>
+    <nav>
+        <div class="Menu">
+            <button onclick="menuFunc()" class="menubtn">Menu</button>
+            <div id="dropdown" class="menuContent">
+                <a> <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="activities.html">Activities</a></li>
+    <li><a href="about.html">About</a></li>
+	<li><a href="membership.html">Membership</a></li>
+	<li><a href="login.html">Login</a></li>
+</ul> </a>
+            </div>
+        </div>
+    </nav>
+  <main>
+    
+    <style>
+        h1 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+        }
+        .log {
+            column-gap: 5px;
+            border: 5px solid mediumblue;
+            padding: 20px;
+        }
+
+    </style>
+
+
+
+    <h1>Login</h1>
+    <div class="log">
+        <label for="uName"><b>Email:</b></label>
+        <input type="text" placeholder="Enter Email" id="uName" required>
+        <label for="pswrd"><b>Password: </b></label>
+        <input type="password" placeholder="Enter Password" id="pswrd" required>
+        <button onclick="display()">Login</button>
+    </div>
+
+ 
+<script>
+    function display(){
+        var mail = document.getElementById("uName");
+        var pass = document.getElementById("pswrd");
+        var info = "email: " + mail.value + " password: " + pass.value;
+        console.log(info);
+    }
+</script>
+
+  </main>
+</body>
+<footer> &#x1f30c  &copy; 2020 FQ9429   &#x1f30c  </footer>
+
+<script>
+    function menuFunc() {
+        document.getElementById("dropdown").classList.toggle("show");
+    }
+</script>
+
+</html>

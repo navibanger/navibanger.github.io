@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    
+  </title>
+  <link href="style.css" rel="stylesheet">
+  
+</head>
+
+<body>
+    <nav>
+        <div class="Menu">
+            <button onclick="menuFunc()" class="menubtn">Menu</button>
+            <div id="dropdown" class="menuContent">
+                <a> <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="activities.html">Activities</a></li>
+    <li><a href="about.html">About</a></li>
+	<li><a href="membership.html">Membership</a></li>
+	<li><a href="login.html">Login</a></li>
+</ul> </a>
+            </div>
+        </div>
+    </nav>
+  <main>
+    
+    <script src="membership.js"></script>
+    <link href="grid.css" rel="stylesheet">
+    <style>
+        h1 {
+            text-align: center;
+        }
+        div {
+            text-align: center;
+        }
+       
+
+        
+    </style>
+
+
+        
+        <h2>Apply Now!</h2>
+        <div class="apply">
+            <label for="uName"><b>Name: </b></label>
+            <input type="text" id="uName" required>
+            <label for="eMail"><b>Email: </b></label>
+            <input type="email" id="eMail" required>
+            <label for="skill"><b>Skill: </b></label>
+            <select name="skill" id="skill" required>
+                <option>Level 1</option>
+                <option>Level 2</option>
+                <option>Level 3</option>
+            </select>
+            <button type="button" onclick="Apply()">Apply!</button>
+        </div>
+        <section id="ThanksDialog">
+            <div class="ShowDialog">
+                <h2></h2>
+                <p></p>
+            </div>
+        </section>
+
+  </main>
+</body>
+<footer> &#x1f30c  &copy; 2020 FQ9429   &#x1f30c  </footer>
+
+<script>
+    function menuFunc() {
+        document.getElementById("dropdown").classList.toggle("show");
+    }
+</script>
+
+</html>
