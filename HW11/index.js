@@ -13,7 +13,7 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			show: "AdminActivities",
+			show: "Home",
 			role: "guest",
 			user: "null"
 		};
