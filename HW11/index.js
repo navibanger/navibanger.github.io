@@ -23,7 +23,9 @@ class App extends React.Component {
 		this.setState({user: User});
 		if(this.state.user == "admin@email.org")
 			this.setState({role: "admin"});
-		else
+		else if(this.state.user == "member@email.org")
+			this.setState({role: "member"});
+		else	
 			return "Navneet FQ9429";
 		this.setState({show: "Home"});
 	}
@@ -47,23 +49,29 @@ class App extends React.Component {
 				<p><a onClick={this.clickHandler.bind(this, "Activities")}>Activities</a></p>
 				<p><a onClick={this.clickHandler.bind(this, "AdminActivities")}>AdminActivities</a></p>
 				<p><a onClick={this.clickHandler.bind(this, "Members")}>Members</a></p>
-				<p><a onClick={this.clickHandler.bind(this, "Login")}>Login</a></p>
 				<p><a onClick={this.logoutHandler.bind(this)}>Logout</a></p>
 			</nav>;
+		let memberMenu = <nav>
+				<p><a onClick={this.clickHandler.bind(this, "Home")}>Home</a></p>
+				<p><a onClick={this.clickHandler.bind(this, "About")}>About</a></p>
+				<p><a onClick={this.clickHandler.bind(this, "Activities")}>Activities</a></p>
+				<p><a onClick={this.clickHandler.bind(this, "Members")}>Members</a></p>
+				<p><a onClick={this.logoutHandler.bind(this)}>Logout</a></p>
+			</nav>;	
 		let guestMenu = <nav>
 				<p><a onClick={this.clickHandler.bind(this, "Home")}>Home</a></p>
 				<p><a onClick={this.clickHandler.bind(this, "About")}>About</a></p>
 				<p><a onClick={this.clickHandler.bind(this, "Activities")}>Activities</a></p>
 				<p><a onClick={this.clickHandler.bind(this, "Login")}>Login</a></p>
-				<p><a onClick={this.logoutHandler.bind(this)}>Logout</a></p>
 			</nav>;
 			
 		let currMenu = null;
 		if(currRole == "admin") {
 			currMenu = adminMenu;
-		}else {
+		}else if(currRole == "member") {
+			currMenu = memberMenu;
+		}else
 			currMenu = guestMenu;
-		}
 		let content = null;
 		switch (this.state.show) {
 			case 'About':
